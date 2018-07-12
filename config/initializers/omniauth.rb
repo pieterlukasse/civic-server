@@ -11,8 +11,10 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   configure do |config|
     config.path_prefix = '/api/auth'
   end
-  provider :github, civic_github_key, civic_github_secret
-  provider :orcid, civic_orcid_key, civic_orcid_secret, authorize_params: { scope: '/authenticate' }, client_options: { token_url: 'https://pub.orcid.org/oauth/token' }
-  provider :google_oauth2, civic_google_key, civic_google_secret
-  provider :developer unless Rails.env.production?
+# go to https://github.com/settings/applications and add github as app to test login on your local civic with a github account:
+  provider :github, 'key_here', 'secret_here'
+#  provider :orcid, civic_orcid_key, civic_orcid_secret, authorize_params: { scope: '/authenticate' }, client_options: { token_url: 'https://pub.orcid.org/oauth/token' }
+#  provider :google_oauth2, civic_google_key, civic_google_secret
+  provider :developer 
+  #unless Rails.env.production?
 end

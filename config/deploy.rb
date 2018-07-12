@@ -1,7 +1,7 @@
 set :application, 'civic'
 set :repo_url, 'https://github.com/griffithlab/civic-server.git'
 
-set :rails_env, 'production'
+set :rails_env, 'development'
 
 set :deploy_to, '/var/www/civic/'
 

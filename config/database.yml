@@ -3,6 +3,8 @@ default: &default
   pool: 5
   encoding: unicode
   host: localhost
+  user: postgres
+  password: mysecretpassword
 
 development:
   <<: *default
